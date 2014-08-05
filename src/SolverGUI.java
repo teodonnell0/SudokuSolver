@@ -24,7 +24,7 @@ public class SolverGUI extends JPanel {
 
     public int[][] sudokuGrid;
 
-    
+
 
     public SolverGUI() {
         this.selectedRow = -1;
