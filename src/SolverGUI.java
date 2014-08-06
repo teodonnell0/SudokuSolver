@@ -118,12 +118,19 @@ public class SolverGUI extends JPanel {
 
 
     protected void solver() {
-        if (solve(0, sudokuGrid))
-            repaint();
-        else
-            System.out.println(2);
-        repaint();
 
+        long start = System.nanoTime();
+        if (solve(0, sudokuGrid)) {
+            long end = System.nanoTime();
+
+            long length = end - start;
+            repaint();
+            System.out.println((long)length / 1000000000.0 + " seconds");
+        }
+
+
+
+        repaint();
     }
 
     protected boolean solve(int p, int[][] cells) {
