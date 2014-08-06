@@ -70,7 +70,7 @@ public class Run extends JFrame {
                     gui.selectedRow = -1;
                 }
 
-                if (KeyEvent.VK_SPACE == e.getKeyCode())
+                else if (KeyEvent.VK_SPACE == e.getKeyCode())
                     gui.solver();
 
                 gui.repaint();
